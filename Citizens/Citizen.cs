@@ -9,6 +9,7 @@ namespace Citizens
         private string firstName;
         private Gender gender;
         private string lastName;
+        private string vatId;
 
         public Citizen(string firstName, string lastName, DateTime dateOfBirth, Gender gender)
         {
@@ -80,13 +81,20 @@ namespace Citizens
         {
             get
             {
-                throw new NotImplementedException();
+                return vatId;
             }
 
             set
             {
-                throw new NotImplementedException();
+                vatId = value;
             }
+        }
+
+        public object Clone()
+        {
+            Citizen copy = new Citizen(firstName, lastName, dateOfBirth, gender);
+            copy.vatId = vatId;
+            return copy;
         }
 
         // Takes any string as argument and return it's correct name representation.

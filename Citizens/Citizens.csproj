@@ -30,6 +30,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Humanizer, Version=2.2.0.0, Culture=neutral, PublicKeyToken=979442b78dfc278e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Humanizer.Core.2.2.0\lib\netstandard1.0\Humanizer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -40,12 +44,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BirthdaysPerDate.cs" />
     <Compile Include="Citizen.cs" />
+    <Compile Include="CitizenList.cs" />
+    <Compile Include="Counters\ManWomanCounter.cs" />
+    <Compile Include="Counters\OddEvenCounter.cs" />
     <Compile Include="Gender.cs" />
     <Compile Include="ICitizen.cs" />
     <Compile Include="ICitizenRegistry.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SystemDateTime.cs" />
+    <Compile Include="VatIdGenerator.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -2,7 +2,8 @@
 
 namespace Citizens
 {
-    public interface ICitizen
+    // should we add ICloneable here?
+    public interface ICitizen : ICloneable
     {
         string FirstName { get; }
         string LastName { get; }
